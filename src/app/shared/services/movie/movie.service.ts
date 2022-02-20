@@ -50,13 +50,13 @@ export class MovieService {
   }
   
   getRecommendations(movidId: number){
-    return this.http.get<TMDBmovieDetails>(
+    return this.http.get<TMDBreturn>(
       `${API_URL}movie/${movidId}/recommendations${API_KEY}&language=${language}`
     );
   }
 
   getSimilar (movidId: number){
-    return this.http.get<TMDBmovieDetails>(
+    return this.http.get<TMDBreturn>(
       `${API_URL}movie/${movidId}/similar${API_KEY}&language=${language}`
     );
   }

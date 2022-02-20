@@ -1,6 +1,7 @@
 <div
   class="flex flex-col md:flex-row md:m-20 md:container mx-auto"
   *ngIf="movie"
+  id="inicio"
 >
   <div class="md:flex-1 rounded-lg overflow-hidden mt-8 md:m-10">
     <img [src]="movie.backdrop_path | imgAdress" class="mx-auto md:w-full" />
@@ -17,7 +18,7 @@
     <div class="flex flex-col my-6">
       <h3 class="text-xl text-road-300 mb-2 font-bold">Generos</h3>
       <!-- <img src="/assets/png/genre.png" class="w-10 h-10"/> -->
-      <div class="grid grid-cols-4 items-center gap-4">
+      <div class="grid grid-cols-3 md:grid-cols-4 items-center gap-4">
         <div
           *ngFor="let genre of movie.genres"
           class="flex flex-col justify-center items-center font-semibold bg-primary-50 dark:bg-road-600 border dark:border-white rounded-lg shadow-lg p-6 w-20 h-20 md:w-28 md:h-28"
@@ -53,9 +54,13 @@
       </div>
     </div>
 
-    <div class="">
+    <div class="pr-2">
       <span class="text-xl font-semibold">Sinopse: </span>
       <p class="text-sm text-road-300">{{ movie.overview }}</p>
     </div>
   </div>
 </div>
+
+<app-movie-carousel title="Recomendados com base nesse filme" [movies]="recommendations"></app-movie-carousel>
+
+<app-movie-carousel title="Similares a este" [movies]="similars"></app-movie-carousel>
