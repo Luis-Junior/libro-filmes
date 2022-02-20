@@ -18,6 +18,6 @@ Depois de instalar todas as dependências, na pasta do projeto use o seguinte co
 
 > A porta que o angular usa por padrão é a 4200, caso a mesma estaja sendo utilizada pode usar o seguinte comando para especificar a porta
 >
-> ##### ng serve --port {numero da porta desejada} --o'
+> ##### ng serve --port {numero da porta desejada} --o
 > 
 > Versão do angular usada nesse projeto : 12.0.5
