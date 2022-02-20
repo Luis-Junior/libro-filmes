@@ -14,7 +14,7 @@ Depois de instalar todas as dependências, na pasta do projeto use o seguinte co
 
 > #### ng serve --o
 
-####Observações
+#### Observações
 
 > A porta que o angular usa por padrão é a 4200, caso a mesma estaja sendo utilizada pode usar o seguinte comando para especificar a porta
 >
