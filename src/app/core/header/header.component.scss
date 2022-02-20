@@ -1,0 +1,12 @@
+.logo {
+  @apply p-6 flex-grow md:flex-grow-0 cursor-pointer transform ease-linear duration-300 relative flex;
+    img{
+        @apply w-14 h-14 top-7 right-2/4 animate-bounce p-2;
+    }
+  span {
+    @apply text-3xl md:text-5xl font-bold  hover:text-primary-300;
+  }
+}
+.nav-items {
+  @apply hover:text-primary-300 cursor-pointer transform ease-linear duration-300 hover:scale-125;
+}

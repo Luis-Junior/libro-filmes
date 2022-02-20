@@ -1,0 +1,23 @@
+.floating_label_input {
+  @apply relative h-12 border border-road-300 rounded-lg p-3 focus-within:ring-1 focus-within:ring-primary-400 focus-within:outline-none;
+  input {
+    @apply top-0 left-0 w-full h-full outline-none text-road-600;
+    &:focus + svg {
+      @apply text-primary-400;
+    }
+  }
+  label {
+    @apply absolute left-4 top-3 cursor-text bg-white px-2 py-0 text-road-300;
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+  }
+  input:focus ~ label,
+  input:not(:placeholder-shown) input:not(:focus) ~ label {
+    @apply -top-2 left-3 text-sm text-primary-400 font-semibold;
+  }
+  .label-up {
+    top: -0.5rem !important;
+    left: 0.75rem !important;
+    font-size: 0.875rem !important;
+    line-height: 1.25rem !important;
+  }
+}

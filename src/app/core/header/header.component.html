@@ -1,0 +1,34 @@
+<header class="flex flex-col">
+  <div class="flex">
+    <div class="logo">
+      <span>libroFilmes</span>
+      <img src="/assets/png/popcorn.png" />
+    </div>
+    <div class="hidden md:flex md:justify-center md:flex-grow p-6">
+      <ul class="flex items-center gap-x-8 font-semibold">
+        <li class="nav-items" (click)="goTo('populares')">Populares</li>
+        <li class="nav-items" (click)="goTo('melhoresAvaliados')">Melhores Avaliados</li>
+        <li class="nav-items" (click)="goTo('nosCinemas')">Nos cinemas</li>
+        <li class="nav-items" (click)="goTo('proximosLancamentos')">Próximos lançamentos</li>
+      </ul>
+    </div>
+    <div (click)="changeTheme()" class="cursor-pointer ease-linear ml-6">
+      <img
+        *ngIf="!darkTheme"
+        src="/assets/svg/dark-mode.svg"
+        class="w-16 h-16"
+      />
+      <img
+        *ngIf="darkTheme"
+        src="/assets/svg/light-mode.svg"
+        class="w-16 h-16"
+      />
+    </div>
+  </div>
+  <nav class="flex justify-evenly md:hidden">
+    <img (click)="goTo('populares')" src="/assets/png/trending.png" class="w-8 h-8" />
+    <img (click)="goTo('melhoresAvaliados')" src="/assets/png/top.png" class="w-8 h-8" />
+    <img (click)="goTo('nosCinemas')" src="/assets/png/movie-theater.png" class="w-8 h-8" />
+    <img (click)="goTo('proximosLancamentos')" src="/assets/png/new.png" class="w-8 h-8" />
+  </nav>
+</header>

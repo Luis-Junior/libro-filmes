@@ -1,0 +1,25 @@
+<app-search-movie></app-search-movie>
+
+<app-movie-carousel
+  id="populares"
+  title="Populares no momento"
+  [movies]="popular"
+></app-movie-carousel>
+
+<app-movie-carousel
+  id="melhoresAvaliados"
+  title="Melhores avaliados"
+  [movies]="topRated"
+></app-movie-carousel>
+
+<app-movie-carousel
+  id="nosCinemas"
+  title="Nos cinemas"
+  [movies]="nowPlaying"
+></app-movie-carousel>
+
+<app-movie-carousel
+  id="proximosLancamentos"
+  title="Próximos lançamentos"
+  [movies]="upcoming"
+></app-movie-carousel>

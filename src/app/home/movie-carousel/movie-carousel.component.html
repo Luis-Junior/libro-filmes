@@ -1,0 +1,14 @@
+<div class="my-10">
+  <h2 class="title">
+    <span class="font-semibold">{{ title.split(" ")[0] }}</span>
+    <span> {{ title.substr(title.split(" ")[0].length, title.length) }}</span>
+  </h2>
+  <swiper [config]="config">
+    <ng-template swiperSlide *ngFor="let movie of movies">
+      <div class="carousel-item">
+        <h3 class="h-14 break-words flex items-center justify-center text-center py-1 text-road-600 dark:text-white font-semibold">{{movie.title}}</h3>
+        <img class="w-full" [src]="movie.poster_path | imgAdress" alt="" />
+      </div>
+    </ng-template>
+  </swiper>
+</div>
