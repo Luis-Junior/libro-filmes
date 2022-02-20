@@ -12,7 +12,7 @@ Libro filmes
 
 Depois de instalar todas as dependências, na pasta do projeto use o seguinte comando
 
-> #### ng serve --o'
+> #### ng serve --o
 
 ####Observações
 
