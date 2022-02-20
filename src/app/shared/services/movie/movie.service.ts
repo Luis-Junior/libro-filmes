@@ -1,3 +1,4 @@
+import { TMDBmovieDetails } from './TMDBmovieDetails';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
@@ -39,6 +40,24 @@ export class MovieService {
   getUpcoming() {
     return this.http.get<TMDBreturn>(
       `${API_URL}movie/upcoming${API_KEY}&language=${language}&region=${region}`
+    );
+  }
+
+  getDetails(movidId: number) {
+    return this.http.get<TMDBmovieDetails>(
+      `${API_URL}movie/${movidId}${API_KEY}&language=${language}`
+    );
+  }
+  
+  getRecommendations(movidId: number){
+    return this.http.get<TMDBmovieDetails>(
+      `${API_URL}movie/${movidId}/recommendations${API_KEY}&language=${language}`
+    );
+  }
+
+  getSimilar (movidId: number){
+    return this.http.get<TMDBmovieDetails>(
+      `${API_URL}movie/${movidId}/similar${API_KEY}&language=${language}`
     );
   }
 }

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { UtilsService } from 'src/app/shared/utils/utils.service';
+import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
   selector: 'app-header',
